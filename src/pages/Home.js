@@ -256,12 +256,15 @@ const responsiveStyles = `
 @media (max-width: 768px) {
   .practice-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
   .why-grid { grid-template-columns: 1fr !important; }
-  .hero-title { font-size: 2rem !important; }
+  .hero-title { font-size: 2.2rem !important; }
   .hero-sub { font-size: 1rem !important; }
   .hero-right { display: none !important; }
   .hero-left { min-width: 100% !important; text-align: center !important; }
   .hero-btns { flex-direction: column !important; align-items: center !important; }
-  .hero-btns .btn-primary, .hero-btns .btn-outline { width: 100% !important; text-align: center !important; }
+  .hero-btns .btn-primary, .hero-btns .btn-outline { 
+    width: 100% !important; 
+    text-align: center !important; 
+  }
   .card { padding: 20px !important; }
   .cta-inner { padding: 30px 20px !important; }
   .cta-title { font-size: 1.5rem !important; }
@@ -271,9 +274,17 @@ const responsiveStyles = `
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: 1.6rem !important; }
-  .card-title { font-size: 1.1rem !important; }
+  .hero-title { font-size: 1.8rem !important; }
+  .hero-sub { font-size: 0.9rem !important; }
+  .card-title { font-size: 1rem !important; }
   .card-desc { font-size: 0.85rem !important; }
+  .card-arrow { font-size: 0.8rem !important; }
+  .card { padding: 16px !important; }
+  .practice-grid { gap: 12px !important; }
+  .why-item { font-size: 0.85rem !important; padding: 12px 16px !important; }
+  .cta-inner { padding: 24px 16px !important; }
+  .cta-title { font-size: 1.3rem !important; }
+  .cta-sub { font-size: 0.85rem !important; }
 }
 `;
 const styleSheet = document.createElement('style');

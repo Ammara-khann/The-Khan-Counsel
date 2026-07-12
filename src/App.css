@@ -1,4 +1,7 @@
-/* ===== GLOBAL STYLES ===== */
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +13,8 @@ body {
   background: #F8F9FA;
   color: #1A1A2E;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -23,7 +28,15 @@ a {
   padding: 0 24px;
 }
 
-/* ===== BUTTONS ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
 .btn-primary {
   display: inline-block;
   background: #C68A1B;
@@ -34,12 +47,13 @@ a {
   font-size: 0.95rem;
   border: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
   text-align: center;
 }
 .btn-primary:hover {
   background: #B07A16;
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(198, 138, 27, 0.3);
 }
 
 .btn-outline {
@@ -52,12 +66,13 @@ a {
   font-size: 0.95rem;
   border: 2px solid #C68A1B;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
   text-align: center;
 }
 .btn-outline:hover {
   background: #C68A1B;
   color: #FFFFFF;
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -70,27 +85,35 @@ a {
   font-size: 0.95rem;
   border: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
   text-align: center;
 }
 .btn-secondary:hover {
   background: #2A2A4E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(26, 26, 46, 0.3);
 }
 
-/* ===== CARDS ===== */
+/* ============================================================
+   CARDS
+   ============================================================ */
+
 .card {
   background: #FFFFFF;
   border-radius: 12px;
   padding: 28px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
 }
 
-/* ===== SECTION TITLES ===== */
+/* ============================================================
+   SECTION TITLES
+   ============================================================ */
+
 .section-title {
   font-size: 2.4rem;
   font-weight: 700;
@@ -101,6 +124,7 @@ a {
 .section-title .highlight {
   color: #C68A1B;
 }
+
 .section-subtitle {
   font-size: 1.05rem;
   color: #6B7A8E;
@@ -108,46 +132,82 @@ a {
 }
 
 /* ============================================================
-   ===== RESPONSIVE =====
+   RESPONSIVE — TABLETS (max-width: 992px)
    ============================================================ */
 
-/* Tablets and smaller laptops */
 @media (max-width: 992px) {
   .container {
     padding: 0 20px;
   }
+
   .section-title {
     font-size: 2rem;
   }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Hero */
   .hero-title {
     font-size: 2.8rem !important;
   }
+
+  /* Grids */
+  .practice-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Header */
+  .desktop-nav {
+    display: none !important;
+  }
+  .cta-btn {
+    display: none !important;
+  }
+  .mobile-btn {
+    display: block !important;
+  }
+  .mobile-menu {
+    display: flex !important;
+  }
 }
 
-/* Mobile phones */
+/* ============================================================
+   RESPONSIVE — MOBILE (max-width: 768px)
+   ============================================================ */
+
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
   }
-  
+
   .section-title {
     font-size: 1.6rem;
   }
   .section-subtitle {
     font-size: 0.95rem;
+    margin-bottom: 24px;
   }
-  
-  .btn-primary, 
-  .btn-outline, 
+
+  /* Buttons */
+  .btn-primary,
+  .btn-outline,
   .btn-secondary {
     padding: 10px 20px;
     font-size: 0.85rem;
     width: 100%;
-    text-align: center;
     display: block;
+    text-align: center;
   }
-  
-  /* Hero Section */
+
+  /* ===== HERO ===== */
   .hero-left {
     text-align: center !important;
     min-width: 100% !important;
@@ -157,6 +217,7 @@ a {
   }
   .hero-sub {
     font-size: 1rem !important;
+    max-width: 100% !important;
   }
   .hero-right {
     display: none !important;
@@ -170,20 +231,24 @@ a {
     width: 100% !important;
     text-align: center !important;
   }
-  
-  /* Practice Areas Grid */
+
+  /* ===== PRACTICE AREAS ===== */
   .practice-grid {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
-  
-  /* Why Grid */
+
+  /* ===== WHY US ===== */
   .why-grid {
     grid-template-columns: 1fr !important;
     max-width: 100% !important;
   }
-  
-  /* Cards */
+  .why-item {
+    font-size: 0.9rem !important;
+    padding: 14px 18px !important;
+  }
+
+  /* ===== CARDS ===== */
   .card {
     padding: 20px !important;
   }
@@ -193,37 +258,29 @@ a {
   .card-desc {
     font-size: 0.85rem !important;
   }
-  
-  /* CTA */
-  .cta-inner {
-    padding: 30px 20px !important;
+  .card-arrow {
+    font-size: 0.85rem !important;
   }
-  .cta-title {
-    font-size: 1.5rem !important;
-  }
-  .cta-sub {
-    font-size: 0.95rem !important;
-  }
-  
-  /* Sections */
-  .section {
-    padding: 40px 0 !important;
-  }
-  .why-section {
-    padding: 40px 0 !important;
-  }
-  .cta-section {
-    padding: 40px 0 !important;
-  }
-  
-  /* Footer */
-  .footer-grid {
+
+  /* ===== BLOGS ===== */
+  .blog-grid {
     grid-template-columns: 1fr !important;
-    text-align: center !important;
-    gap: 24px !important;
+    gap: 16px !important;
   }
-  
-  /* Founder Page */
+  .blog-card {
+    padding: 20px !important;
+  }
+  .blog-title {
+    font-size: 1.1rem !important;
+  }
+  .blog-excerpt {
+    font-size: 0.85rem !important;
+  }
+  .blog-meta {
+    font-size: 0.75rem !important;
+  }
+
+  /* ===== FOUNDER ===== */
   .founder-header {
     flex-direction: column !important;
     text-align: center !important;
@@ -233,48 +290,157 @@ a {
     height: 100px !important;
   }
   .founder-name {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
+  }
+  .founder-designation {
+    font-size: 0.75rem !important;
+  }
+  .founder-bio {
+    font-size: 0.95rem !important;
   }
   .founder-stats {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
   }
-  
-  /* Blogs Page */
-  .blog-grid {
+  .stat-number {
+    font-size: 1.6rem !important;
+  }
+  .stat-label {
+    font-size: 0.7rem !important;
+  }
+  .founder-card {
+    padding: 24px !important;
+  }
+
+  /* ===== CTA ===== */
+  .cta-inner {
+    padding: 30px 20px !important;
+  }
+  .cta-title {
+    font-size: 1.5rem !important;
+  }
+  .cta-sub {
+    font-size: 0.95rem !important;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    padding: 40px 0 !important;
+  }
+  .why-section {
+    padding: 40px 0 !important;
+  }
+  .cta-section {
+    padding: 40px 0 !important;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-grid {
     grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 20px !important;
+  }
+  .footer-logo {
+    height: 35px !important;
+  }
+  .footer-text {
+    font-size: 0.85rem !important;
+  }
+  .footer-heading {
+    font-size: 0.95rem !important;
+  }
+  .footer-link {
+    font-size: 0.85rem !important;
+  }
+  .footer-social {
+    justify-content: center !important;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .contact-info {
+    padding: 20px !important;
+  }
+  .contact-form {
+    padding: 20px !important;
+  }
+  .contact-input {
+    font-size: 0.9rem !important;
+    padding: 10px 14px !important;
+  }
+
+  /* ===== SERVICES ===== */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .service-card {
+    padding: 20px !important;
   }
 }
 
-/* Small mobile phones */
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (max-width: 480px)
+   ============================================================ */
+
 @media (max-width: 480px) {
   .container {
     padding: 0 12px;
   }
-  
+
   .section-title {
     font-size: 1.4rem;
   }
-  
-  .hero-title {
-    font-size: 1.6rem !important;
+  .section-subtitle {
+    font-size: 0.85rem;
   }
-  .hero-sub {
-    font-size: 0.9rem !important;
-  }
-  
-  .btn-primary, 
-  .btn-outline, 
+
+  /* Buttons */
+  .btn-primary,
+  .btn-outline,
   .btn-secondary {
     padding: 8px 16px;
     font-size: 0.8rem;
   }
-  
-  .founder-stats {
-    grid-template-columns: 1fr !important;
+
+  /* Hero */
+  .hero-title {
+    font-size: 1.6rem !important;
   }
-  .founder-card {
+  .hero-sub {
+    font-size: 0.85rem !important;
+  }
+
+  /* Cards */
+  .card {
     padding: 16px !important;
   }
+  .card-title {
+    font-size: 1rem !important;
+  }
+  .card-desc {
+    font-size: 0.8rem !important;
+  }
+  .card-arrow {
+    font-size: 0.8rem !important;
+  }
+
+  /* Practice Areas */
+  .practice-grid {
+    gap: 12px !important;
+  }
+
+  /* Why */
+  .why-item {
+    font-size: 0.8rem !important;
+    padding: 10px 14px !important;
+    gap: 8px !important;
+  }
+
+  /* Founder */
   .founder-avatar {
     width: 80px !important;
     height: 80px !important;
@@ -282,11 +448,171 @@ a {
   .founder-name {
     font-size: 1.2rem !important;
   }
-  
+  .founder-stats {
+    grid-template-columns: 1fr !important;
+  }
+  .founder-card {
+    padding: 16px !important;
+  }
+  .founder-bio {
+    font-size: 0.85rem !important;
+  }
+
+  /* Blogs */
   .blog-card {
-    padding: 20px !important;
+    padding: 16px !important;
   }
   .blog-title {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
+  }
+  .blog-excerpt {
+    font-size: 0.8rem !important;
+  }
+
+  /* CTA */
+  .cta-inner {
+    padding: 20px 16px !important;
+  }
+  .cta-title {
+    font-size: 1.2rem !important;
+  }
+  .cta-sub {
+    font-size: 0.8rem !important;
+  }
+
+  /* Header */
+  .logo {
+    height: 30px !important;
+  }
+  .container {
+    padding: 0 12px !important;
+  }
+
+  /* Footer */
+  .footer-logo {
+    height: 30px !important;
+  }
+  .footer-text {
+    font-size: 0.75rem !important;
+  }
+  .footer-heading {
+    font-size: 0.85rem !important;
+  }
+  .footer-link {
+    font-size: 0.75rem !important;
+  }
+
+  /* Services */
+  .service-card {
+    padding: 16px !important;
+  }
+  .service-title {
+    font-size: 1rem !important;
+  }
+  .service-desc {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET LANDSCAPE (768px - 992px)
+   ============================================================ */
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .hero-title {
+    font-size: 2.6rem !important;
+  }
+
+  .practice-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .card {
+    padding: 24px !important;
+  }
+
+  .cta-inner {
+    padding: 40px 30px !important;
+  }
+  .cta-title {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — LARGE SCREENS (1200px+)
+   ============================================================ */
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .hero-title {
+    font-size: 4rem !important;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+
+  .practice-grid {
+    gap: 30px !important;
+  }
+  .blog-grid {
+    gap: 30px !important;
+  }
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+.mt-5 { margin-top: 48px; }
+
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+.mb-4 { margin-bottom: 32px; }
+.mb-5 { margin-bottom: 48px; }
+
+.hidden-mobile {
+  display: block;
+}
+.hidden-desktop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  .hidden-desktop {
+    display: block !important;
   }
 }
