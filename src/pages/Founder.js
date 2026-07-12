@@ -13,7 +13,7 @@ const Founder = () => {
         <div style={styles.header}>
           <div style={styles.avatar}>
             <img 
-              src="/aisha-khan.jpg" 
+              src="/Aisha tkc.jpg" 
               alt="Aisha Khan - Founder" 
               style={styles.avatarImage}
             />
@@ -21,7 +21,7 @@ const Founder = () => {
           <div style={styles.info}>
             <h2 style={styles.name}>Aisha Khan</h2>
             <p style={styles.designation}>
-              FOUNDER — ADVOCATE | Immigration Lawyer
+              FOUNDER | ADVOCATE | IMMIGRATION LAWYER
             </p>
           </div>
         </div>
@@ -35,10 +35,10 @@ const Founder = () => {
             A law graduate of <strong>Quaid-e-Azam University, Islamabad (LL.B, 2022)</strong>. Her career has taken her across immigration law, civil litigation, corporate matters, and family law, giving her a practitioner's grasp of how the law actually works in practice, not just on paper.
           </p>
           <p style={styles.bio}>
-            Before founding the firm, Aisha built her expertise handling business immigration cases, including UAE expansion routes, Innovator Founder Visas, and UK Expansion Worker applications and supported sensitive, high-stakes cases for the <strong>Domestic Abuse Alliance UK</strong>, where strict procedural precision and genuine care for the client went hand in hand. She has since drafted and overseen more than <strong>500 court bundles</strong>, always with the same attention to both the legal detail and the human being on the other side of it.
+            Before founding the firm, Aisha built her expertise handling business immigration cases, including UAE expansion routes, Innovator Founder Visas, and UK Expansion Worker applications and supported sensitive, high-stakes cases for the Domestic Abuse Alliance UK, where strict procedural precision and genuine care for the client went hand in hand. She has since drafted and overseen more than 500 court bundles, always with the same attention to both the legal detail and the human being on the other side of it.
           </p>
           <p style={styles.bio} className="closing">
-            <strong>That dual grounding — rigorous legal research paired with clear, client-focused communication — is the foundation The Khan Counsel is built on.</strong>
+            <strong>That dual grounding rigorous legal research paired with clear, client-focused communication is the foundation The Khan Counsel is built on.</strong>
           </p>
         </div>
 

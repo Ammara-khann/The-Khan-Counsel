@@ -31,29 +31,31 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== PRACTICE AREAS ===== */}
-      <section className="container" style={styles.section}>
-        <h2 className="section-title" style={{ textAlign: 'center' }}>
-          Our <span className="highlight">Practice Areas</span>
-        </h2>
-        <p className="section-subtitle" style={{ textAlign: 'center' }}>
-          Comprehensive legal services tailored to your needs.
-        </p>
-        <div style={styles.grid}>
-          {featured.map(service => (
-            <Link to={`/services/${service.id}`} key={service.id} style={styles.cardLink}>
-              <div className="card" style={styles.card}>
-                <div style={{ ...styles.icon, color: service.color }}>
-                  <FontAwesomeIcon icon={['fas', service.icon]} size="2x" />
+      {/* ===== PRACTICE AREAS - FULL CREAM BACKGROUND ===== */}
+      <section style={styles.section}>
+        <div className="container">
+          <h2 className="section-title" style={{ textAlign: 'center' }}>
+            Our <span className="highlight">Practice Areas</span>
+          </h2>
+          <p className="section-subtitle" style={{ textAlign: 'center' }}>
+            Comprehensive legal services tailored to your needs.
+          </p>
+          <div style={styles.grid}>
+            {featured.map(service => (
+              <Link to={`/services/${service.id}`} key={service.id} style={styles.cardLink}>
+                <div className="card" style={styles.card}>
+                  <div style={{ ...styles.icon, color: service.color }}>
+                    <FontAwesomeIcon icon={['fas', service.icon]} size="2x" />
+                  </div>
+                  <h3 style={styles.cardTitle}>{service.title}</h3>
+                  <p style={styles.cardDesc}>{service.shortDesc}</p>
+                  <span style={styles.cardArrow}>
+                    Learn More <FontAwesomeIcon icon={faArrowRight} />
+                  </span>
                 </div>
-                <h3 style={styles.cardTitle}>{service.title}</h3>
-                <p style={styles.cardDesc}>{service.shortDesc}</p>
-                <span style={styles.cardArrow}>
-                  Learn More <FontAwesomeIcon icon={faArrowRight} />
-                </span>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -107,6 +109,7 @@ const Home = () => {
 };
 
 const styles = {
+  // ===== HERO =====
   hero: {
     background: '#FFFFFF',
     padding: '60px 0',
@@ -150,17 +153,24 @@ const styles = {
     fontSize: '8rem',
     opacity: 1.05,
   },
+
+  // ===== PRACTICE AREAS - FULL CREAM =====
   section: {
-    backgroundColor: '#FFF8F0',
+    backgroundColor: '#FFF8F0',   // ← FULL CREAM BACKGROUND
     padding: '60px 0',
+    width: '100%',
+    margin: '0 auto',
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-    gap: '30px',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: '24px',
+    alignItems: 'stretch',
   },
   cardLink: {
     textDecoration: 'none',
+    display: 'block',
+    height: '100%',
   },
   card: {
     borderTop: '3px solid #C68A1B',
@@ -170,6 +180,9 @@ const styles = {
     backgroundColor: '#FFFFFF',
     borderRadius: '12px',
     boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+    display: 'flex',
+    flexDirection: 'column',
+    transition: 'all 0.3s ease',
   },
   icon: {
     fontSize: '1.8rem',
@@ -185,12 +198,15 @@ const styles = {
     fontSize: '0.95rem',
     color: '#6B7A8E',
     marginBottom: '12px',
+    flex: 1,
   },
   cardArrow: {
     color: '#C68A1B',
     fontWeight: '600',
     fontSize: '0.9rem',
   },
+
+  // ===== WHY US =====
   why: {
     background: '#F5F5F5',
     padding: '60px 0',
@@ -214,6 +230,8 @@ const styles = {
     color: '#1A1A2E',
     boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
   },
+
+  // ===== CTA =====
   cta: {
     padding: '60px 0',
   },
@@ -240,8 +258,8 @@ const styles = {
 const responsiveStyles = `
 @media (max-width: 992px) {
   .hero-title { font-size: 2.8rem !important; }
-  .hero-emoji { font-size: 5rem !important; }
   .why-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
 @media (max-width: 768px) {
@@ -250,9 +268,15 @@ const responsiveStyles = `
   .hero-right { display: none !important; }
   .hero-left { min-width: 100% !important; text-align: center !important; }
   .hero-btns { flex-direction: column !important; align-items: center !important; }
-  .hero-btns .btn-primary, .hero-btns .btn-outline { width: 100% !important; text-align: center !important; }
-  .why-grid { grid-template-columns: 1fr !important; max-width: 100% !important; }
-  .grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .hero-btns .btn-primary, .hero-btns .btn-outline { 
+    width: 100% !important; 
+    text-align: center !important; 
+  }
+  .grid { 
+    grid-template-columns: 1fr !important; 
+    gap: 20px !important; 
+  }
+  .why-grid { grid-template-columns: 1fr !important; }
   .card { padding: 20px !important; }
   .cta-inner { padding: 30px 20px !important; }
   .cta-title { font-size: 1.5rem !important; }
@@ -263,6 +287,8 @@ const responsiveStyles = `
   .section { padding: 40px 0 !important; }
   .why { padding: 40px 0 !important; }
   .cta { padding: 40px 0 !important; }
+  .card-title { font-size: 1.1rem !important; }
+  .card-desc { font-size: 0.85rem !important; }
 }
 `;
 const styleSheet = document.createElement('style');
