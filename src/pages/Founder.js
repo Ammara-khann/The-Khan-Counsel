@@ -9,11 +9,11 @@ const Founder = () => {
       </h1>
 
       <div style={styles.card}>
-        {/* ===== HEADER WITH IMAGE ===== */}
+        {/* ===== HEADER ===== */}
         <div style={styles.header}>
           <div style={styles.avatar}>
             <img 
-              src="/Aisha tkc.jpg" 
+              src="/aisha-khan.jpg" 
               alt="Aisha Khan - Founder" 
               style={styles.avatarImage}
             />
@@ -35,10 +35,10 @@ const Founder = () => {
             A law graduate of <strong>Quaid-e-Azam University, Islamabad (LL.B, 2022)</strong>. Her career has taken her across immigration law, civil litigation, corporate matters, and family law, giving her a practitioner's grasp of how the law actually works in practice, not just on paper.
           </p>
           <p style={styles.bio}>
-            Before founding the firm, Aisha built her expertise handling business immigration cases, including UAE expansion routes, Innovator Founder Visas, and UK Expansion Worker applications and supported sensitive, high-stakes cases for the Domestic Abuse Alliance UK, where strict procedural precision and genuine care for the client went hand in hand. She has since drafted and overseen more than 500 court bundles, always with the same attention to both the legal detail and the human being on the other side of it.
+            Before founding the firm, Aisha built her expertise handling business immigration cases, including UAE expansion routes, Innovator Founder Visas, and UK Expansion Worker applications and supported sensitive, high-stakes cases for the <strong>Domestic Abuse Alliance UK</strong>, where strict procedural precision and genuine care for the client went hand in hand. She has since drafted and overseen more than <strong>500 court bundles</strong>, always with the same attention to both the legal detail and the human being on the other side of it.
           </p>
           <p style={styles.bio} className="closing">
-            <strong>That dual grounding rigorous legal research paired with clear, client-focused communication is the foundation The Khan Counsel is built on.</strong>
+            <strong>That dual grounding — rigorous legal research paired with clear, client-focused communication — is the foundation The Khan Counsel is built on.</strong>
           </p>
         </div>
 
@@ -67,7 +67,6 @@ const Founder = () => {
   );
 };
 
-// ===== STYLES =====
 const styles = {
   founder: {
     padding: '40px 0 60px',
@@ -81,7 +80,6 @@ const styles = {
     boxShadow: '0 8px 40px rgba(10, 17, 40, 0.08)',
     borderTop: '4px solid #C68A1B',
   },
-  // ===== HEADER =====
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -120,7 +118,6 @@ const styles = {
     color: '#C68A1B',
     letterSpacing: '0.5px',
   },
-  // ===== CONTENT =====
   content: {
     marginBottom: '28px',
   },
@@ -131,7 +128,6 @@ const styles = {
     marginBottom: '16px',
     textAlign: 'justify',
   },
-  // ===== STATS =====
   stats: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
@@ -157,7 +153,6 @@ const styles = {
     color: '#6B7A8E',
     fontWeight: '500',
   },
-  // ===== BACK LINK =====
   backLink: {
     marginTop: '24px',
     textAlign: 'center',
@@ -167,22 +162,24 @@ const styles = {
     fontWeight: '600',
     textDecoration: 'none',
     fontSize: '0.95rem',
-    transition: 'color 0.3s ease',
   },
 };
 
 // ===== RESPONSIVE =====
 const responsiveStyles = `
 @media (max-width: 768px) {
-  .founder-header { flex-direction: column; text-align: center; }
+  .founder-header { flex-direction: column; text-align: center !important; }
   .founder-avatar { width: 100px; height: 100px; }
-  .founder-name { font-size: 1.6rem; }
-  .founder-stats { grid-template-columns: repeat(3, 1fr); }
+  .founder-name { font-size: 1.6rem !important; }
+  .founder-stats { grid-template-columns: repeat(3, 1fr) !important; }
+  .founder-card { padding: 24px !important; }
 }
 @media (max-width: 480px) {
-  .founder-card { padding: 20px; }
-  .founder-stats { grid-template-columns: 1fr; }
+  .founder-card { padding: 16px !important; }
+  .founder-stats { grid-template-columns: 1fr !important; }
   .founder-avatar { width: 80px; height: 80px; }
+  .founder-name { font-size: 1.3rem !important; }
+  .founder-bio { font-size: 0.95rem !important; }
 }
 `;
 const styleSheet = document.createElement('style');

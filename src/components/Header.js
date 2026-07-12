@@ -11,7 +11,7 @@ const Header = () => {
     { path: '/', label: 'Home' },
     { path: '/services', label: 'Practice Areas' },
     { path: '/about', label: 'About' },
-    { path: '/founder', label: 'Founder' }, 
+    { path: '/founder', label: 'Founder' },
     { path: '/blogs', label: 'Insights' },
     { path: '/contact', label: 'Contact' },
   ];
@@ -75,9 +75,9 @@ const Header = () => {
 
 const styles = {
   header: {
-    background: '#14213b',   
+    background: '#0A1128',
     padding: '12px 0',
-    borderBottom: '2px solid #C68A1B',  
+    borderBottom: '2px solid #C68A1B',
     position: 'sticky',
     top: 0,
     zIndex: 1000,
@@ -103,11 +103,11 @@ const styles = {
   },
   nav: {
     display: 'flex',
-    gap: '32px',
+    gap: '28px',
     alignItems: 'center',
   },
   navLink: {
-    color: '#FFFFFF',        
+    color: '#F5F0E1',
     textDecoration: 'none',
     fontSize: '0.9rem',
     fontWeight: '500',
@@ -117,7 +117,7 @@ const styles = {
   },
   active: {
     borderBottomColor: '#C68A1B',
-    color: '#C68A1B',        
+    color: '#C68A1B',
   },
   ctaBtn: {
     background: '#C68A1B',
@@ -135,17 +135,17 @@ const styles = {
     border: 'none',
     fontSize: '1.5rem',
     cursor: 'pointer',
-    color: '#FFFFFF',     
+    color: '#F5F0E1',
   },
   mobileMenu: {
     display: 'none',
     flexDirection: 'column',
-    padding: '16px 24px',
-    background: '#14213b',  
+    padding: '16px 24px 24px',
+    background: '#0A1128',
     borderTop: '1px solid rgba(198, 138, 27, 0.2)',
   },
   mobileLink: {
-    color: '#FFFFFF',       
+    color: '#F5F0E1',
     textDecoration: 'none',
     padding: '10px 0',
     fontSize: '1rem',
@@ -163,12 +163,18 @@ const styles = {
   },
 };
 
-// Responsive
+// ===== RESPONSIVE =====
 const responsiveStyles = `
 @media (max-width: 992px) {
-  nav, .cta-btn { display: none; }
+  .desktop-nav { display: none; }
+  .cta-btn { display: none; }
   .mobile-btn { display: block !important; }
   .mobile-menu { display: flex !important; }
+}
+
+@media (max-width: 480px) {
+  .logo { height: 35px !important; }
+  .container { padding: 0 12px !important; }
 }
 `;
 const styleSheet = document.createElement('style');
