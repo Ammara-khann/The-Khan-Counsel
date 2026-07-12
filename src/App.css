@@ -35,6 +35,7 @@ a {
   border: none;
   cursor: pointer;
   transition: all 0.2s;
+  text-align: center;
 }
 .btn-primary:hover {
   background: #B07A16;
@@ -52,6 +53,7 @@ a {
   border: 2px solid #C68A1B;
   cursor: pointer;
   transition: all 0.2s;
+  text-align: center;
 }
 .btn-outline:hover {
   background: #C68A1B;
@@ -69,6 +71,7 @@ a {
   border: none;
   cursor: pointer;
   transition: all 0.2s;
+  text-align: center;
 }
 .btn-secondary:hover {
   background: #2A2A4E;
@@ -104,40 +107,186 @@ a {
   margin-bottom: 40px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ============================================================
+   ===== RESPONSIVE =====
+   ============================================================ */
+
+/* Tablets and smaller laptops */
 @media (max-width: 992px) {
   .container {
-    padding: 0 16px;
+    padding: 0 20px;
   }
   .section-title {
     font-size: 2rem;
   }
+  .hero-title {
+    font-size: 2.8rem !important;
+  }
 }
 
+/* Mobile phones */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
   .section-title {
     font-size: 1.6rem;
   }
   .section-subtitle {
     font-size: 0.95rem;
   }
-  .btn-primary, .btn-outline, .btn-secondary {
+  
+  .btn-primary, 
+  .btn-outline, 
+  .btn-secondary {
     padding: 10px 20px;
     font-size: 0.85rem;
     width: 100%;
     text-align: center;
+    display: block;
   }
-  .container {
-    padding: 0 12px;
+  
+  /* Hero Section */
+  .hero-left {
+    text-align: center !important;
+    min-width: 100% !important;
+  }
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  .hero-sub {
+    font-size: 1rem !important;
+  }
+  .hero-right {
+    display: none !important;
+  }
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  /* Practice Areas Grid */
+  .practice-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  /* Why Grid */
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 20px !important;
+  }
+  .card-title {
+    font-size: 1.1rem !important;
+  }
+  .card-desc {
+    font-size: 0.85rem !important;
+  }
+  
+  /* CTA */
+  .cta-inner {
+    padding: 30px 20px !important;
+  }
+  .cta-title {
+    font-size: 1.5rem !important;
+  }
+  .cta-sub {
+    font-size: 0.95rem !important;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 40px 0 !important;
+  }
+  .why-section {
+    padding: 40px 0 !important;
+  }
+  .cta-section {
+    padding: 40px 0 !important;
+  }
+  
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 24px !important;
+  }
+  
+  /* Founder Page */
+  .founder-header {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .founder-avatar {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .founder-name {
+    font-size: 1.4rem !important;
+  }
+  .founder-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Blogs Page */
+  .blog-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
+/* Small mobile phones */
 @media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
   .section-title {
     font-size: 1.4rem;
   }
-  .btn-primary, .btn-outline, .btn-secondary {
+  
+  .hero-title {
+    font-size: 1.6rem !important;
+  }
+  .hero-sub {
+    font-size: 0.9rem !important;
+  }
+  
+  .btn-primary, 
+  .btn-outline, 
+  .btn-secondary {
     padding: 8px 16px;
     font-size: 0.8rem;
+  }
+  
+  .founder-stats {
+    grid-template-columns: 1fr !important;
+  }
+  .founder-card {
+    padding: 16px !important;
+  }
+  .founder-avatar {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .founder-name {
+    font-size: 1.2rem !important;
+  }
+  
+  .blog-card {
+    padding: 20px !important;
+  }
+  .blog-title {
+    font-size: 1.1rem !important;
   }
 }

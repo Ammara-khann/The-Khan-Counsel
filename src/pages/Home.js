@@ -31,8 +31,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== PRACTICE AREAS - FULL CREAM BACKGROUND ===== */}
-      <section style={styles.section}>
+      {/* ===== PRACTICE AREAS ===== */}
+      <section className="section" style={styles.section}>
         <div className="container">
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Our <span className="highlight">Practice Areas</span>
@@ -40,7 +40,7 @@ const Home = () => {
           <p className="section-subtitle" style={{ textAlign: 'center' }}>
             Comprehensive legal services tailored to your needs.
           </p>
-          <div style={styles.grid}>
+          <div className="practice-grid" style={styles.grid}>
             {featured.map(service => (
               <Link to={`/services/${service.id}`} key={service.id} style={styles.cardLink}>
                 <div className="card" style={styles.card}>
@@ -60,12 +60,12 @@ const Home = () => {
       </section>
 
       {/* ===== WHY US ===== */}
-      <section style={styles.why}>
+      <section className="why-section" style={styles.why}>
         <div className="container">
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Why <span className="highlight">The Khan Counsel?</span>
           </h2>
-          <div style={styles.whyGrid}>
+          <div className="why-grid" style={styles.whyGrid}>
             <div style={styles.whyItem}>
               <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
               Strategic & Proactive
@@ -95,7 +95,7 @@ const Home = () => {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="container" style={styles.cta}>
+      <section className="cta-section container" style={styles.cta}>
         <div style={styles.ctaInner}>
           <h2 style={styles.ctaTitle}>Ready to resolve your legal matters?</h2>
           <p style={styles.ctaSub}>Book a consultation with our expert team today.</p>
@@ -109,7 +109,6 @@ const Home = () => {
 };
 
 const styles = {
-  // ===== HERO =====
   hero: {
     background: '#FFFFFF',
     padding: '60px 0',
@@ -153,13 +152,9 @@ const styles = {
     fontSize: '8rem',
     opacity: 1.05,
   },
-
-  // ===== PRACTICE AREAS - FULL CREAM =====
   section: {
-    backgroundColor: '#FFF8F0',   // ← FULL CREAM BACKGROUND
+    backgroundColor: '#FFF8F0',
     padding: '60px 0',
-    width: '100%',
-    margin: '0 auto',
   },
   grid: {
     display: 'grid',
@@ -205,8 +200,6 @@ const styles = {
     fontWeight: '600',
     fontSize: '0.9rem',
   },
-
-  // ===== WHY US =====
   why: {
     background: '#F5F5F5',
     padding: '60px 0',
@@ -230,8 +223,6 @@ const styles = {
     color: '#1A1A2E',
     boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
   },
-
-  // ===== CTA =====
   cta: {
     padding: '60px 0',
   },
@@ -257,36 +248,30 @@ const styles = {
 // ===== RESPONSIVE =====
 const responsiveStyles = `
 @media (max-width: 992px) {
-  .hero-title { font-size: 2.8rem !important; }
+  .practice-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .why-grid { grid-template-columns: repeat(2, 1fr) !important; }
-  .grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .hero-title { font-size: 2.8rem !important; }
 }
 
 @media (max-width: 768px) {
-  .hero-title { font-size: 2.2rem !important; }
+  .practice-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .why-grid { grid-template-columns: 1fr !important; }
+  .hero-title { font-size: 2rem !important; }
   .hero-sub { font-size: 1rem !important; }
   .hero-right { display: none !important; }
   .hero-left { min-width: 100% !important; text-align: center !important; }
   .hero-btns { flex-direction: column !important; align-items: center !important; }
-  .hero-btns .btn-primary, .hero-btns .btn-outline { 
-    width: 100% !important; 
-    text-align: center !important; 
-  }
-  .grid { 
-    grid-template-columns: 1fr !important; 
-    gap: 20px !important; 
-  }
-  .why-grid { grid-template-columns: 1fr !important; }
+  .hero-btns .btn-primary, .hero-btns .btn-outline { width: 100% !important; text-align: center !important; }
   .card { padding: 20px !important; }
   .cta-inner { padding: 30px 20px !important; }
   .cta-title { font-size: 1.5rem !important; }
+  .section { padding: 40px 0 !important; }
+  .why-section { padding: 40px 0 !important; }
+  .cta-section { padding: 40px 0 !important; }
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: 1.8rem !important; }
-  .section { padding: 40px 0 !important; }
-  .why { padding: 40px 0 !important; }
-  .cta { padding: 40px 0 !important; }
+  .hero-title { font-size: 1.6rem !important; }
   .card-title { font-size: 1.1rem !important; }
   .card-desc { font-size: 0.85rem !important; }
 }
