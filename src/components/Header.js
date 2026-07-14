@@ -148,7 +148,7 @@ const styles = {
     color: '#F5F0E1',
     textDecoration: 'none',
     padding: '12px 0',
-    fontSize: '1.1rem',
+    fontSize: '1rem',
     fontWeight: '500',
     borderBottom: '1px solid rgba(255,255,255,0.05)',
   },
@@ -175,8 +175,6 @@ const responsiveStyles = `
 @media (max-width: 480px) {
   .logo { height: 35px !important; }
   .container { padding: 0 12px !important; }
-  .mobile-menu { padding: 16px 16px 24px !important; }
-  .mobile-link { font-size: 1rem !important; padding: 10px 0 !important; }
 }
 `;
 const styleSheet = document.createElement('style');

@@ -158,18 +158,6 @@ main {
   .logo {
     height: 35px !important;
   }
-  .desktop-nav {
-    display: none !important;
-  }
-  .cta-btn {
-    display: none !important;
-  }
-  .mobile-btn {
-    display: block !important;
-  }
-  .mobile-menu {
-    display: flex !important;
-  }
 
   /* Hero */
   .hero-left {
