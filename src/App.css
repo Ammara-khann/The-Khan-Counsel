@@ -123,239 +123,238 @@ img {
 }
 
 /* ============================================================
-   ===== MOBILE FIRST — ALL DEVICES =====
+   MOBILE FIRST — ALL DEVICES
    ============================================================ */
 
-/* ===== DEFAULT: MOBILE (max-width: 480px) ===== */
+/* ===== MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
 
-/* Container */
-.container {
-  padding: 0 12px;
+  .section-title {
+    font-size: 1.4rem;
+  }
+  .section-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary,
+  .btn-outline,
+  .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  /* Header */
+  .logo {
+    height: 35px !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .cta-btn {
+    display: none !important;
+  }
+  .mobile-btn {
+    display: block !important;
+  }
+  .mobile-menu {
+    display: flex !important;
+  }
+
+  /* Hero */
+  .hero-left {
+    text-align: center !important;
+    min-width: 100% !important;
+  }
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+  .hero-sub {
+    font-size: 0.9rem !important;
+    max-width: 100% !important;
+  }
+  .hero-right {
+    display: none !important;
+  }
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Practice Areas */
+  .practice-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .card {
+    padding: 16px !important;
+  }
+  .card-title {
+    font-size: 1rem !important;
+  }
+  .card-desc {
+    font-size: 0.8rem !important;
+  }
+  .card-arrow {
+    font-size: 0.8rem !important;
+  }
+
+  /* Why Us */
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+  }
+  .why-item {
+    font-size: 0.85rem !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Blogs */
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .blog-card {
+    padding: 16px !important;
+  }
+  .blog-title {
+    font-size: 1rem !important;
+  }
+  .blog-excerpt {
+    font-size: 0.8rem !important;
+  }
+  .blog-meta {
+    font-size: 0.7rem !important;
+  }
+
+  /* Founder */
+  .founder-header {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .founder-avatar {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .founder-name {
+    font-size: 1.2rem !important;
+  }
+  .founder-designation {
+    font-size: 0.7rem !important;
+  }
+  .founder-bio {
+    font-size: 0.85rem !important;
+    text-align: left !important;
+  }
+  .founder-stats {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .stat-number {
+    font-size: 1.4rem !important;
+  }
+  .stat-label {
+    font-size: 0.7rem !important;
+  }
+  .founder-card {
+    padding: 16px !important;
+  }
+
+  /* CTA */
+  .cta-inner {
+    padding: 24px 16px !important;
+  }
+  .cta-title {
+    font-size: 1.3rem !important;
+  }
+  .cta-sub {
+    font-size: 0.85rem !important;
+  }
+
+  /* Sections */
+  .section {
+    padding: 30px 0 !important;
+  }
+  .why-section {
+    padding: 30px 0 !important;
+  }
+  .cta-section {
+    padding: 30px 0 !important;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+  .footer-logo {
+    height: 30px !important;
+  }
+  .footer-text {
+    font-size: 0.8rem !important;
+  }
+  .footer-heading {
+    font-size: 0.9rem !important;
+  }
+  .footer-link {
+    font-size: 0.8rem !important;
+  }
+  .footer-social {
+    justify-content: center !important;
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .contact-info {
+    padding: 16px !important;
+  }
+  .contact-form {
+    padding: 16px !important;
+  }
+  .contact-input {
+    font-size: 0.9rem !important;
+    padding: 10px 14px !important;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .service-card {
+    padding: 16px !important;
+  }
+  .service-title {
+    font-size: 1rem !important;
+  }
+  .service-desc {
+    font-size: 0.8rem !important;
+  }
+
+  /* Floating Buttons */
+  .floating-btn {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.2rem !important;
+  }
 }
 
-/* Typography */
-.section-title {
-  font-size: 1.4rem;
-}
-.section-subtitle {
-  font-size: 0.85rem;
-  margin-bottom: 20px;
-}
-
-/* Buttons - Full Width on Mobile */
-.btn-primary,
-.btn-outline,
-.btn-secondary {
-  padding: 10px 20px;
-  font-size: 0.85rem;
-  width: 100%;
-  display: block;
-  text-align: center;
-}
-
-/* ===== HEADER ===== */
-header .container {
-  padding: 0 12px;
-}
-.logo {
-  height: 35px !important;
-}
-.desktop-nav {
-  display: none !important;
-}
-.cta-btn {
-  display: none !important;
-}
-.mobile-btn {
-  display: block !important;
-}
-.mobile-menu {
-  display: flex !important;
-}
-
-/* ===== HERO ===== */
-.hero-left {
-  text-align: center !important;
-  min-width: 100% !important;
-}
-.hero-title {
-  font-size: 1.8rem !important;
-}
-.hero-sub {
-  font-size: 0.9rem !important;
-  max-width: 100% !important;
-}
-.hero-right {
-  display: none !important;
-}
-.hero-btns {
-  flex-direction: column !important;
-  gap: 10px !important;
-}
-.hero-btns .btn-primary,
-.hero-btns .btn-outline {
-  width: 100% !important;
-  text-align: center !important;
-}
-
-/* ===== PRACTICE AREAS ===== */
-.practice-grid {
-  grid-template-columns: 1fr !important;
-  gap: 12px !important;
-}
-.card {
-  padding: 16px !important;
-}
-.card-title {
-  font-size: 1rem !important;
-}
-.card-desc {
-  font-size: 0.8rem !important;
-}
-.card-arrow {
-  font-size: 0.8rem !important;
-}
-
-/* ===== WHY US ===== */
-.why-grid {
-  grid-template-columns: 1fr !important;
-  max-width: 100% !important;
-}
-.why-item {
-  font-size: 0.85rem !important;
-  padding: 12px 16px !important;
-}
-
-/* ===== BLOGS ===== */
-.blog-grid {
-  grid-template-columns: 1fr !important;
-  gap: 12px !important;
-}
-.blog-card {
-  padding: 16px !important;
-}
-.blog-title {
-  font-size: 1rem !important;
-}
-.blog-excerpt {
-  font-size: 0.8rem !important;
-}
-.blog-meta {
-  font-size: 0.7rem !important;
-}
-
-/* ===== FOUNDER ===== */
-.founder-header {
-  flex-direction: column !important;
-  text-align: center !important;
-}
-.founder-avatar {
-  width: 80px !important;
-  height: 80px !important;
-}
-.founder-name {
-  font-size: 1.2rem !important;
-}
-.founder-designation {
-  font-size: 0.7rem !important;
-}
-.founder-bio {
-  font-size: 0.85rem !important;
-  text-align: left !important;
-}
-.founder-stats {
-  grid-template-columns: 1fr !important;
-  gap: 10px !important;
-}
-.stat-number {
-  font-size: 1.4rem !important;
-}
-.stat-label {
-  font-size: 0.7rem !important;
-}
-.founder-card {
-  padding: 16px !important;
-}
-
-/* ===== CTA ===== */
-.cta-inner {
-  padding: 24px 16px !important;
-}
-.cta-title {
-  font-size: 1.3rem !important;
-}
-.cta-sub {
-  font-size: 0.85rem !important;
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  padding: 30px 0 !important;
-}
-.why-section {
-  padding: 30px 0 !important;
-}
-.cta-section {
-  padding: 30px 0 !important;
-}
-
-/* ===== FOOTER ===== */
-.footer-grid {
-  grid-template-columns: 1fr !important;
-  text-align: center !important;
-  gap: 16px !important;
-}
-.footer-logo {
-  height: 30px !important;
-}
-.footer-text {
-  font-size: 0.8rem !important;
-}
-.footer-heading {
-  font-size: 0.9rem !important;
-}
-.footer-link {
-  font-size: 0.8rem !important;
-}
-.footer-social {
-  justify-content: center !important;
-}
-
-/* ===== CONTACT ===== */
-.contact-grid {
-  grid-template-columns: 1fr !important;
-  gap: 16px !important;
-}
-.contact-info {
-  padding: 16px !important;
-}
-.contact-form {
-  padding: 16px !important;
-}
-.contact-input {
-  font-size: 0.9rem !important;
-  padding: 10px 14px !important;
-}
-
-/* ===== SERVICES ===== */
-.services-grid {
-  grid-template-columns: 1fr !important;
-  gap: 12px !important;
-}
-.service-card {
-  padding: 16px !important;
-}
-.service-title {
-  font-size: 1rem !important;
-}
-.service-desc {
-  font-size: 0.8rem !important;
-}
-
-/* ============================================================
-   ===== TABLET (481px - 768px) =====
-   ============================================================ */
-
+/* ===== TABLET (481px - 768px) ===== */
 @media (min-width: 481px) and (max-width: 768px) {
   .container {
     padding: 0 16px;
@@ -378,7 +377,7 @@ header .container {
   }
 
   .hero-title {
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
   }
   .hero-sub {
     font-size: 1rem !important;
@@ -440,10 +439,7 @@ header .container {
   }
 }
 
-/* ============================================================
-   ===== DESKTOP (769px+) =====
-   ============================================================ */
-
+/* ===== DESKTOP (769px+) ===== */
 @media (min-width: 769px) {
   .container {
     padding: 0 24px;
@@ -551,10 +547,7 @@ header .container {
   }
 }
 
-/* ============================================================
-   ===== LARGE DESKTOP (1200px+) =====
-   ============================================================ */
-
+/* ===== LARGE DESKTOP (1200px+) ===== */
 @media (min-width: 1200px) {
   .container {
     padding: 0 40px;
@@ -570,67 +563,5 @@ header .container {
 
   .practice-grid {
     gap: 30px !important;
-  }
-}
-
-/* ============================================================
-   ===== UTILITY CLASSES =====
-   ============================================================ */
-
-.text-center {
-  text-align: center;
-}
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-
-.mt-1 {
-  margin-top: 8px;
-}
-.mt-2 {
-  margin-top: 16px;
-}
-.mt-3 {
-  margin-top: 24px;
-}
-.mt-4 {
-  margin-top: 32px;
-}
-.mt-5 {
-  margin-top: 48px;
-}
-
-.mb-1 {
-  margin-bottom: 8px;
-}
-.mb-2 {
-  margin-bottom: 16px;
-}
-.mb-3 {
-  margin-bottom: 24px;
-}
-.mb-4 {
-  margin-bottom: 32px;
-}
-.mb-5 {
-  margin-bottom: 48px;
-}
-
-.hidden-mobile {
-  display: block;
-}
-.hidden-desktop {
-  display: none;
-}
-
-@media (max-width: 480px) {
-  .hidden-mobile {
-    display: none !important;
-  }
-  .hidden-desktop {
-    display: block !important;
   }
 }

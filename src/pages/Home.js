@@ -109,7 +109,6 @@ const Home = () => {
 };
 
 const styles = {
-  // ===== HERO =====
   hero: {
     background: '#FFFFFF',
     padding: '60px 0',
@@ -153,8 +152,6 @@ const styles = {
     fontSize: '8rem',
     opacity: 1.05,
   },
-
-  // ===== PRACTICE AREAS =====
   section: {
     backgroundColor: '#FFF8F0',
     padding: '60px 0',
@@ -203,8 +200,6 @@ const styles = {
     fontWeight: '600',
     fontSize: '0.9rem',
   },
-
-  // ===== WHY US =====
   why: {
     background: '#F5F5F5',
     padding: '60px 0',
@@ -228,8 +223,6 @@ const styles = {
     color: '#1A1A2E',
     boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
   },
-
-  // ===== CTA =====
   cta: {
     padding: '60px 0',
   },

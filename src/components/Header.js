@@ -45,13 +45,13 @@ const Header = () => {
           Book Consultation
         </Link>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Hamburger */}
         <button style={styles.mobileBtn} onClick={() => setIsOpen(!isOpen)}>
           <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" />
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Side Menu */}
       {isOpen && (
         <div style={styles.mobileMenu}>
           {navLinks.map(link => (
@@ -140,15 +140,16 @@ const styles = {
   mobileMenu: {
     display: 'none',
     flexDirection: 'column',
-    padding: '16px 24px 24px',
+    padding: '20px 24px 30px',
     background: '#0A1128',
     borderTop: '1px solid rgba(198, 138, 27, 0.2)',
   },
   mobileLink: {
     color: '#F5F0E1',
     textDecoration: 'none',
-    padding: '10px 0',
-    fontSize: '1rem',
+    padding: '12px 0',
+    fontSize: '1.1rem',
+    fontWeight: '500',
     borderBottom: '1px solid rgba(255,255,255,0.05)',
   },
   mobileCta: {
@@ -159,22 +160,23 @@ const styles = {
     textDecoration: 'none',
     textAlign: 'center',
     fontWeight: '600',
-    marginTop: '12px',
+    marginTop: '16px',
   },
 };
 
 // ===== RESPONSIVE =====
 const responsiveStyles = `
 @media (max-width: 992px) {
-  .desktop-nav { display: none; }
-  .cta-btn { display: none; }
+  .desktop-nav { display: none !important; }
+  .cta-btn { display: none !important; }
   .mobile-btn { display: block !important; }
   .mobile-menu { display: flex !important; }
 }
-
 @media (max-width: 480px) {
   .logo { height: 35px !important; }
   .container { padding: 0 12px !important; }
+  .mobile-menu { padding: 16px 16px 24px !important; }
+  .mobile-link { font-size: 1rem !important; padding: 10px 0 !important; }
 }
 `;
 const styleSheet = document.createElement('style');
