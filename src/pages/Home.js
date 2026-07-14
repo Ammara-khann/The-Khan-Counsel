@@ -8,7 +8,7 @@ const Home = () => {
   const featured = servicesData.slice(0, 6);
 
   return (
-    <div>
+    <>
       {/* ===== HERO ===== */}
       <section style={styles.hero}>
         <div className="container" style={styles.heroInner}>
@@ -67,27 +67,27 @@ const Home = () => {
           </h2>
           <div className="why-grid" style={styles.whyGrid}>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Strategic & Proactive
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Practical Legal Advice
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Clear Communication
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Outcome-Focused
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Client‑Centered Approach
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Transparent & Honest
             </div>
           </div>
@@ -104,7 +104,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
@@ -150,7 +150,7 @@ const styles = {
   },
   heroEmoji: {
     fontSize: '8rem',
-    opacity: 1.05,
+    opacity: 0.12,
   },
   section: {
     backgroundColor: '#FFF8F0',

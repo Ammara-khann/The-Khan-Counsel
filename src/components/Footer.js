@@ -5,58 +5,60 @@ import { faInstagram, faFacebook, faYoutube, faLinkedin } from '@fortawesome/fre
 
 const Footer = () => {
   return (
-    <footer style={styles.footer}>
-      <div style={styles.container}>
-        <div style={styles.grid}>
+    <footer>
+      <div className="container">
+        <div className="footer-grid">
           {/* Brand */}
           <div>
-            <div style={styles.logoContainer}>
-              <span style={styles.logoText}>THE</span>
-              <span style={styles.logoTextLarge}>KHAN</span>
-              <span style={styles.logoText}>COUNSEL</span>
-            </div>
-            <p style={styles.tagline}>Think clearly, act decisively.</p>
-            <p style={styles.text}>📍 Islamabad, Pakistan</p>
-            <p style={styles.text}>📧 thekhancounsel@gmail.com</p>
-            <p style={styles.text}>📞 +92 333 7131650</p>
+            <Link to="/">
+              <img src="/logo.png" alt="The Khan Counsel" className="footer-logo" />
+            </Link>
+            <p className="footer-tagline">Think clearly, act decisively.</p>
+            <p className="footer-text">📍 Islamabad, Pakistan</p>
+            <p className="footer-text">📧 thekhancounsel@gmail.com</p>
+            <p className="footer-text">📞 +92 300 1234567</p>
           </div>
 
           {/* Practice Areas */}
           <div>
-            <h4 style={styles.heading}>Practice Areas</h4>
-            <ul style={styles.list}>
-              <li><Link to="/services/family-law" style={styles.link}>Family Law</Link></li>
-              <li><Link to="/services/civil-law" style={styles.link}>Civil Litigation</Link></li>
-              <li><Link to="/services/corporate-law" style={styles.link}>Corporate Law</Link></li>
-              <li><Link to="/services/immigration-law" style={styles.link}>Immigration and Global Mobility</Link></li>
-              <li><Link to="/services/employment-law" style={styles.link}>Employment Law</Link></li>
-            </ul>
+            <h4 className="footer-heading">Practice Areas</h4>
+            <Link to="/services/family-law" className="footer-link">Family Law</Link><br />
+            <Link to="/services/civil-law" className="footer-link">Civil Litigation</Link><br />
+            <Link to="/services/corporate-law" className="footer-link">Corporate Law</Link><br />
+            <Link to="/services/immigration-law" className="footer-link">Immigration</Link><br />
+            <Link to="/services/employment-law" className="footer-link">Employment Law</Link><br />
+            <Link to="/services/property-law" className="footer-link">Property & Real Estate</Link>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 style={styles.heading}>Quick Links</h4>
-            <ul style={styles.list}>
-              <li><Link to="/" style={styles.link}>Home</Link></li>
-              <li><Link to="/services" style={styles.link}>Practice Areas</Link></li>
-              <li><Link to="/about" style={styles.link}>About</Link></li>
-              <li><Link to="/contact" style={styles.link}>Contact</Link></li>
-              <li><Link to="/blogs" style={styles.link}>Insights</Link></li>
-            </ul>
+            <h4 className="footer-heading">Quick Links</h4>
+            <Link to="/" className="footer-link">Home</Link><br />
+            <Link to="/services" className="footer-link">Practice Areas</Link><br />
+            <Link to="/about" className="footer-link">About</Link><br />
+            <Link to="/founder" className="footer-link">Founder</Link><br />
+            <Link to="/blogs" className="footer-link">Insights</Link><br />
+            <Link to="/contact" className="footer-link">Contact</Link>
           </div>
 
           {/* Social */}
           <div>
-            <h4 style={styles.heading}>Connect With Us</h4>
-            <div style={styles.social}>
-              <a href="https://www.instagram.com/thekhancounsel/" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
+            <h4 className="footer-heading">Connect With Us</h4>
+            <div className="footer-social">
+              <a href="https://www.instagram.com/thisiskhantalks/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
-              <a href="#" style={styles.socialIcon}><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
-              <a href="#" style={styles.socialIcon}><FontAwesomeIcon icon={faYoutube} size="lg" /></a>
-              <a href="#" style={styles.socialIcon}><FontAwesomeIcon icon={faLinkedin} size="lg" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faFacebook} size="lg" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faYoutube} size="lg" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} size="lg" />
+              </a>
             </div>
-            <p style={{ ...styles.text, marginTop: '16px', fontSize: '0.85rem' }}>
+            <p className="footer-copyright" style={{ marginTop: '16px' }}>
               © 2026 The Khan Counsel. All rights reserved.
             </p>
           </div>
@@ -64,87 +66,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-const styles = {
-  footer: {
-    background: '#14213b',
-    color: '#B8C5C0',
-    padding: '48px 0 24px',
-    marginTop: '60px',
-    borderTop: '2px solid #C68A1B',
-  },
-  container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 24px',
-  },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '40px',
-    marginBottom: '24px',
-  },
-  logoContainer: {
-    display: 'flex',
-    alignItems: 'baseline',
-    gap: '4px',
-    marginBottom: '4px',
-  },
-  logoText: {
-    fontSize: '0.7rem',
-    fontWeight: '400',
-    letterSpacing: '3px',
-    color: '#B8C5C0',
-    fontFamily: 'Inter, sans-serif',
-  },
-  logoTextLarge: {
-    fontSize: '1.4rem',
-    fontWeight: '700',
-    letterSpacing: '4px',
-    color: '#C68A1B',
-    fontFamily: 'Cormorant Garamond, serif',
-  },
-  tagline: {
-    fontSize: '0.75rem',
-    letterSpacing: '1.5px',
-    color: '#C68A1B',
-    textTransform: 'uppercase',
-    marginBottom: '16px',
-    fontFamily: 'Inter, sans-serif',
-  },
-  text: {
-    marginBottom: '4px',
-    fontSize: '0.9rem',
-    color: '#B8C5C0',
-  },
-  heading: {
-    color: '#F5F0E1',
-    fontSize: '1rem',
-    fontWeight: '600',
-    marginBottom: '12px',
-    fontFamily: "'Inter', sans-serif",
-  },
-  list: {
-    listStyle: 'none',
-    padding: 0,
-  },
-  link: {
-    color: '#B8C5C0',
-    textDecoration: 'none',
-    display: 'inline-block',
-    marginBottom: '6px',
-    fontSize: '0.9rem',
-    transition: 'color 0.2s ease',
-  },
-  social: {
-    display: 'flex',
-    gap: '16px',
-  },
-  socialIcon: {
-    color: '#F5F0E1',
-    transition: 'color 0.2s ease',
-  },
 };
 
 export default Footer;
