@@ -9,7 +9,7 @@ const Founder = () => {
       </h1>
 
       <div style={styles.card}>
-        {/* ===== HEADER ===== */}
+        {/* ===== HEADER WITH IMAGE ===== */}
         <div style={styles.header}>
           <div style={styles.avatar}>
             <img 
@@ -21,7 +21,7 @@ const Founder = () => {
           <div style={styles.info}>
             <h2 style={styles.name}>Aisha Khan</h2>
             <p style={styles.designation}>
-              FOUNDER | ADVOCATE | IMMIGRATION LAWYER
+              FOUNDER — ADVOCATE | Immigration Lawyer
             </p>
           </div>
         </div>
@@ -67,6 +67,7 @@ const Founder = () => {
   );
 };
 
+// ===== STYLES =====
 const styles = {
   founder: {
     padding: '40px 0 60px',
@@ -80,6 +81,7 @@ const styles = {
     boxShadow: '0 8px 40px rgba(10, 17, 40, 0.08)',
     borderTop: '4px solid #C68A1B',
   },
+  // ===== HEADER =====
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -118,6 +120,7 @@ const styles = {
     color: '#C68A1B',
     letterSpacing: '0.5px',
   },
+  // ===== CONTENT =====
   content: {
     marginBottom: '28px',
   },
@@ -128,6 +131,7 @@ const styles = {
     marginBottom: '16px',
     textAlign: 'justify',
   },
+  // ===== STATS =====
   stats: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
@@ -153,6 +157,7 @@ const styles = {
     color: '#6B7A8E',
     fontWeight: '500',
   },
+  // ===== BACK LINK =====
   backLink: {
     marginTop: '24px',
     textAlign: 'center',
@@ -162,24 +167,22 @@ const styles = {
     fontWeight: '600',
     textDecoration: 'none',
     fontSize: '0.95rem',
+    transition: 'color 0.3s ease',
   },
 };
 
 // ===== RESPONSIVE =====
 const responsiveStyles = `
 @media (max-width: 768px) {
-  .founder-header { flex-direction: column; text-align: center !important; }
+  .founder-header { flex-direction: column; text-align: center; }
   .founder-avatar { width: 100px; height: 100px; }
-  .founder-name { font-size: 1.6rem !important; }
-  .founder-stats { grid-template-columns: repeat(3, 1fr) !important; }
-  .founder-card { padding: 24px !important; }
+  .founder-name { font-size: 1.6rem; }
+  .founder-stats { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 480px) {
-  .founder-card { padding: 16px !important; }
-  .founder-stats { grid-template-columns: 1fr !important; }
+  .founder-card { padding: 20px; }
+  .founder-stats { grid-template-columns: 1fr; }
   .founder-avatar { width: 80px; height: 80px; }
-  .founder-name { font-size: 1.3rem !important; }
-  .founder-bio { font-size: 0.95rem !important; }
 }
 `;
 const styleSheet = document.createElement('style');
