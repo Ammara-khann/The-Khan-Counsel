@@ -33,7 +33,7 @@ img {
 }
 
 /* ============================================================
-   APP LAYOUT — FULL HEIGHT
+   APP LAYOUT
    ============================================================ */
 
 .App {
@@ -44,95 +44,6 @@ img {
 
 main {
   flex: 1;
-}
-
-/* ============================================================
-   FOOTER — FULL WIDTH
-   ============================================================ */
-
-footer {
-  width: 100%;
-  background: #0A1128;
-  color: #B8C5C0;
-  padding: 48px 0 24px;
-  margin-top: 40px;
-  border-top: 3px solid #C68A1B;
-}
-
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-bottom: 24px;
-}
-
-.footer-logo {
-  height: 45px;
-  width: auto;
-  object-fit: contain;
-  margin-bottom: 8px;
-}
-
-.footer-tagline {
-  font-size: 0.7rem;
-  letter-spacing: 1.5px;
-  color: #C68A1B;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.footer-text {
-  margin-bottom: 4px;
-  font-size: 0.9rem;
-  color: #B8C5C0;
-}
-
-.footer-heading {
-  color: #F5F0E1;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.footer-link {
-  color: #B8C5C0;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-}
-
-.footer-link:hover {
-  color: #C68A1B;
-}
-
-.footer-social {
-  display: flex;
-  gap: 16px;
-}
-
-.footer-social a {
-  color: #F5F0E1;
-  transition: color 0.2s ease;
-}
-
-.footer-social a:hover {
-  color: #C68A1B;
-}
-
-.footer-copyright {
-  border-top: 1px solid #1E3347;
-  padding-top: 20px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #6B7A8E;
 }
 
 /* ============================================================
@@ -243,7 +154,7 @@ footer .container {
     text-align: center;
   }
 
-  /* ===== HEADER ===== */
+  /* Header */
   .logo {
     height: 35px !important;
   }
@@ -260,7 +171,7 @@ footer .container {
     display: flex !important;
   }
 
-  /* ===== HERO ===== */
+  /* Hero */
   .hero-left {
     text-align: center !important;
     min-width: 100% !important;
@@ -285,7 +196,7 @@ footer .container {
     text-align: center !important;
   }
 
-  /* ===== PRACTICE AREAS ===== */
+  /* Practice Areas */
   .practice-grid {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
@@ -300,7 +211,7 @@ footer .container {
     font-size: 0.8rem !important;
   }
 
-  /* ===== WHY US ===== */
+  /* Why Us */
   .why-grid {
     grid-template-columns: 1fr !important;
     max-width: 100% !important;
@@ -310,7 +221,7 @@ footer .container {
     padding: 12px 16px !important;
   }
 
-  /* ===== BLOGS ===== */
+  /* Blogs */
   .blog-grid {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
@@ -325,7 +236,7 @@ footer .container {
     font-size: 0.8rem !important;
   }
 
-  /* ===== FOUNDER ===== */
+  /* Founder */
   .founder-header {
     flex-direction: column !important;
     text-align: center !important;
@@ -341,11 +252,8 @@ footer .container {
     grid-template-columns: 1fr !important;
     gap: 10px !important;
   }
-  .stat-number {
-    font-size: 1.4rem !important;
-  }
 
-  /* ===== CTA ===== */
+  /* CTA */
   .cta-inner {
     padding: 24px 16px !important;
   }
@@ -356,15 +264,11 @@ footer .container {
     font-size: 0.85rem !important;
   }
 
-  /* ===== FOOTER — FULL WIDTH ===== */
-  footer {
-    padding: 30px 0 16px !important;
-    margin-top: 20px !important;
-  }
+  /* Footer */
   .footer-grid {
     grid-template-columns: 1fr !important;
     text-align: center !important;
-    gap: 16px !important;
+    gap: 20px !important;
   }
   .footer-logo {
     height: 30px !important;
@@ -381,11 +285,8 @@ footer .container {
   .footer-social {
     justify-content: center !important;
   }
-  .footer-copyright {
-    font-size: 0.7rem !important;
-  }
 
-  /* ===== CONTACT ===== */
+  /* Contact */
   .contact-grid {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
@@ -397,7 +298,7 @@ footer .container {
     padding: 16px !important;
   }
 
-  /* ===== SERVICES ===== */
+  /* Services */
   .services-grid {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
@@ -406,14 +307,6 @@ footer .container {
     padding: 16px !important;
   }
 
-  /* ===== FLOATING BUTTONS ===== */
-  .floating-btn {
-    width: 48px !important;
-    height: 48px !important;
-    font-size: 1.2rem !important;
-  }
-
-  /* ===== SECTIONS ===== */
   .section {
     padding: 30px 0 !important;
   }
@@ -465,9 +358,6 @@ footer .container {
 
   .card {
     padding: 20px !important;
-  }
-  .card-title {
-    font-size: 1.1rem !important;
   }
 
   .founder-avatar {
@@ -540,9 +430,6 @@ footer .container {
 
   .card {
     padding: 28px !important;
-  }
-  .card-title {
-    font-size: 1.2rem !important;
   }
 
   .founder-avatar {
