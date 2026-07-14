@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer style={styles.footer}>
       <div style={styles.container}>
-        <div style={styles.grid}>
+        <div className="footer-grid">
           {/* Brand */}
           <div>
             <Link to="/" style={styles.logoLink}>
@@ -76,12 +76,6 @@ const styles = {
     margin: '0 auto',
     padding: '0 24px',
   },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '40px',
-    marginBottom: '24px',
-  },
   logoLink: {
     display: 'inline-block',
     textDecoration: 'none',
@@ -127,17 +121,5 @@ const styles = {
     transition: 'color 0.2s ease',
   },
 };
-
-// ===== RESPONSIVE =====
-const responsiveStyles = `
-@media (max-width: 768px) {
-  .footer-grid { grid-template-columns: 1fr !important; text-align: center !important; gap: 24px !important; }
-  .footer-logo { height: 35px !important; }
-  .footer-social { justify-content: center !important; }
-}
-`;
-const styleSheet = document.createElement('style');
-styleSheet.textContent = responsiveStyles;
-document.head.appendChild(styleSheet);
 
 export default Footer;
