@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase';
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -20,7 +22,7 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setStatus(null);
@@ -39,23 +41,30 @@ const Contact = () => {
       service: form.service,
     };
 
-    emailjs
-      .send(SERVICE_ID, ADMIN_TEMPLATE_ID, adminData, PUBLIC_KEY)
-      .then(() => {
-        return emailjs.send(SERVICE_ID, AUTO_REPLY_TEMPLATE_ID, autoReplyData, PUBLIC_KEY);
-      })
-      .then(() => {
-        setIsLoading(false);
-        setStatus('success');
-        setForm({ name: '', email: '', service: '', message: '' });
-        setTimeout(() => setStatus(null), 6000);
-      })
-      .catch((err) => {
-        console.error('EmailJS Error:', err);
-        setIsLoading(false);
-        setStatus('error');
-        setTimeout(() => setStatus(null), 6000);
+    try {
+      // Save the enquiry to Firestore first, so it is never lost
+      // even if the email step below fails for any reason.
+      await addDoc(collection(db, 'contactSubmissions'), {
+        name: form.name,
+        email: form.email,
+        service: form.service,
+        message: form.message,
+        createdAt: serverTimestamp(),
       });
+
+      await emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, adminData, PUBLIC_KEY);
+      await emailjs.send(SERVICE_ID, AUTO_REPLY_TEMPLATE_ID, autoReplyData, PUBLIC_KEY);
+
+      setIsLoading(false);
+      setStatus('success');
+      setForm({ name: '', email: '', service: '', message: '' });
+      setTimeout(() => setStatus(null), 6000);
+    } catch (err) {
+      console.error('Submission Error:', err);
+      setIsLoading(false);
+      setStatus('error');
+      setTimeout(() => setStatus(null), 6000);
+    }
   };
 
   return (
@@ -91,11 +100,11 @@ const Contact = () => {
           </div>
           <div style={styles.infoItem}>
             <strong style={{ color: '#C68A1B' }}>📞 Phone</strong>
-            <p><a href="tel:+923001234567">+92 333 7131650</a></p>
+            <p><a href="tel:+923001234567">+92 300 1234567</a></p>
           </div>
           <div style={styles.infoItem}>
             <strong style={{ color: '#C68A1B' }}>📸 Instagram</strong>
-            <a href="https://www.instagram.com/thekhancounsel/">@thekhancounsel</a>
+            <a href="https://www.instagram.com/thisiskhantalks/">@thekhancounsel</a>
           </div>
           <div style={styles.quoteBox}>
             <strong style={{ color: '#C68A1B' }}>⚖️ The Khan Counsel</strong>
@@ -133,9 +142,11 @@ const Contact = () => {
             <option value="">Select a Practice Area</option>
             <option value="Family Law">Family Law (Pakistan)</option>
             <option value="Civil Law">Civil Litigation</option>
-            <option value="Corporate Law">Corporate Law</option>
+            <option value="Corporate Law">Corporate & Commercial Law</option>
             <option value="Immigration Law">Immigration & Global Mobility</option>
             <option value="Employment Law">Employment Law</option>
+            <option value="Property Law">Property & Real Estate</option>
+            <option value="Regulatory Law">Regulatory & Compliance</option>
           </select>
           <textarea
             name="message"
