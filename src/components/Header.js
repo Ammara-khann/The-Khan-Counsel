@@ -33,7 +33,7 @@ const Header = () => {
       <div className="header-container">
         {/* Logo */}
         <Link to="/" className="logo-link">
-          <img src="/logo.png" alt="The Khan Counsel" className="logo-img" />
+          <img src="/logo-transparent.png" alt="The Khan Counsel" className="logo-img" />
         </Link>
 
         {/* Desktop Navigation */}
