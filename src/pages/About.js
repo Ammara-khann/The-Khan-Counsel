@@ -40,6 +40,7 @@ const About = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             style={styles.instaLink}
+            className="insta-link"
           >
             📸 Instagram: @thekhancounsel
           </a>

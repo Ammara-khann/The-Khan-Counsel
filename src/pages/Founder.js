@@ -8,10 +8,10 @@ const Founder = () => {
         Founder's <span className="highlight">Dossier</span>
       </h1>
 
-      <div style={styles.card}>
+      <div style={styles.card} className="founder-card">
         {/* ===== HEADER WITH IMAGE ===== */}
-        <div style={styles.header}>
-          <div style={styles.avatar}>
+        <div style={styles.header} className="founder-header">
+          <div style={styles.avatar} className="founder-avatar">
             <img 
               src="/Aisha tkc.jpg" 
               alt="Aisha Khan - Founder" 
@@ -19,7 +19,7 @@ const Founder = () => {
             />
           </div>
           <div style={styles.info}>
-            <h2 style={styles.name}>Aisha Khan</h2>
+            <h2 style={styles.name} className="founder-name">Aisha Khan</h2>
             <p style={styles.designation}>
               FOUNDER — ADVOCATE | Immigration Lawyer
             </p>
@@ -43,7 +43,7 @@ const Founder = () => {
         </div>
 
         {/* ===== STATS ===== */}
-        <div style={styles.stats}>
+        <div style={styles.stats} className="founder-stats">
           <div style={styles.stat}>
             <span style={styles.statNumber}>500+</span>
             <span style={styles.statLabel}>Court Bundles</span>
@@ -174,15 +174,15 @@ const styles = {
 // ===== RESPONSIVE =====
 const responsiveStyles = `
 @media (max-width: 768px) {
-  .founder-header { flex-direction: column; text-align: center; }
-  .founder-avatar { width: 100px; height: 100px; }
-  .founder-name { font-size: 1.6rem; }
-  .founder-stats { grid-template-columns: repeat(3, 1fr); }
+  .founder-header { flex-direction: column !important; text-align: center !important; }
+  .founder-avatar { width: 100px !important; height: 100px !important; margin: 0 auto; }
+  .founder-name { font-size: 1.6rem !important; }
+  .founder-stats { grid-template-columns: repeat(3, 1fr) !important; }
 }
 @media (max-width: 480px) {
-  .founder-card { padding: 20px; }
-  .founder-stats { grid-template-columns: 1fr; }
-  .founder-avatar { width: 80px; height: 80px; }
+  .founder-card { padding: 20px !important; }
+  .founder-stats { grid-template-columns: 1fr !important; }
+  .founder-avatar { width: 80px !important; height: 80px !important; }
 }
 `;
 const styleSheet = document.createElement('style');

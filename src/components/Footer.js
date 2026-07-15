@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer style={styles.footer}>
-      <div style={styles.container}>
-        <div style={styles.grid}>
+    <footer style={styles.footer} className="footer-root">
+      <div style={styles.container} className="footer-container">
+        <div style={styles.grid} className="footer-grid">
           {/* Brand */}
           <div>
             <div style={styles.logoContainer}>

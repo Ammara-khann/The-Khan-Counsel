@@ -78,9 +78,9 @@ const Contact = () => {
         </div>
       )}
 
-      <div style={styles.grid}>
+      <div style={styles.grid} className="contact-grid">
         {/* ===== LEFT SIDE ===== */}
-        <div style={styles.info}>
+        <div style={styles.info} className="contact-info">
           <div style={styles.infoItem}>
             <strong style={{ color: '#C68A1B' }}>📍 Location</strong>
             <p>Islamabad, Pakistan</p>
@@ -104,7 +104,7 @@ const Contact = () => {
         </div>
 
         {/* ===== RIGHT SIDE — FORM ===== */}
-        <form style={styles.form} onSubmit={handleSubmit}>
+        <form style={styles.form} className="contact-form" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"

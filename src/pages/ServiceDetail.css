@@ -1,0 +1,8 @@
+@media (max-width: 480px){
+  .service-header{
+    flex-wrap: wrap !important;
+  }
+  .service-title{
+    font-size: 1.6rem !important;
+  }
+}

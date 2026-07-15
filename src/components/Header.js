@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import './Header.css';
 
 const Header = () => {
   const location = useLocation();
@@ -15,6 +16,17 @@ const Header = () => {
     { path: '/blogs', label: 'Insights' },
     { path: '/contact', label: 'Contact' },
   ];
+
+  // Close the menu whenever the route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  // Lock background scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
 
   return (
     <header className="site-header">
@@ -43,18 +55,29 @@ const Header = () => {
         </Link>
 
         {/* Mobile Hamburger */}
-        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="mobile-toggle"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
+        >
           <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" />
         </button>
       </div>
 
+      {/* Dark backdrop behind the mobile side menu */}
+      <div
+        className={`menu-overlay ${isOpen ? 'open' : ''}`}
+        onClick={() => setIsOpen(false)}
+      />
+
       {/* Mobile Side Menu */}
-      <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
+      <nav className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         {navLinks.map(link => (
           <Link
             key={link.path}
             to={link.path}
-            className="mobile-link"
+            className={`mobile-link ${location.pathname === link.path ? 'active' : ''}`}
             onClick={() => setIsOpen(false)}
           >
             {link.label}
@@ -63,7 +86,7 @@ const Header = () => {
         <Link to="/contact" className="mobile-cta" onClick={() => setIsOpen(false)}>
           Book Consultation
         </Link>
-      </div>
+      </nav>
     </header>
   );
 };

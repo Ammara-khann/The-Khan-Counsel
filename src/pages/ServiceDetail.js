@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import './ServiceDetail.css';
 
 const ServiceDetail = () => {
   const { id } = useParams();
@@ -23,7 +24,7 @@ const ServiceDetail = () => {
         <FontAwesomeIcon icon={faArrowLeft} style={{ marginRight: '8px' }} /> Back to all Practice Areas
       </Link>
 
-      <div style={styles.header}>
+      <div style={styles.header} className="service-header">
         <div style={{
           ...styles.iconBig,
           backgroundColor: service.color + '20',
@@ -32,7 +33,7 @@ const ServiceDetail = () => {
           <FontAwesomeIcon icon={['fas', service.icon]} size="3x" />
         </div>
         <div>
-          <h1 style={styles.title}>{service.title}</h1>
+          <h1 style={styles.title} className="service-title">{service.title}</h1>
           <p style={styles.category}>The Khan Counsel</p>
         </div>
       </div>

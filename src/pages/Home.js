@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { servicesData } from '../data/servicesData';
+import './Home.css';
 
 const Home = () => {
   const featured = servicesData.slice(0, 6);
@@ -11,22 +12,22 @@ const Home = () => {
     <div>
       {/* ===== HERO ===== */}
       <section style={styles.hero}>
-        <div className="container" style={styles.heroInner}>
-          <div style={styles.heroLeft}>
-            <h1 style={styles.heroTitle}>
+        <div className="container home-hero-inner">
+          <div className="home-hero-left">
+            <h1 className="home-hero-title">
               Think Clearly.<br />
               <span style={{ color: '#C68A1B' }}>Act Decisively.</span>
             </h1>
             <p style={styles.heroSub}>
               Strategic legal guidance across immigration, family, civil, corporate, and commercial matters.
             </p>
-            <div style={styles.heroBtns}>
+            <div style={styles.heroBtns} className="home-hero-btns">
               <Link to="/services" className="btn-primary">Explore Practice Areas</Link>
               <Link to="/contact" className="btn-outline">Book Consultation</Link>
             </div>
           </div>
-          <div style={styles.heroRight}>
-            <span style={styles.heroEmoji}>⚖️</span>
+          <div className="home-hero-right">
+            <span style={styles.heroEmoji} className="home-hero-emoji">⚖️</span>
           </div>
         </div>
       </section>
@@ -36,10 +37,10 @@ const Home = () => {
         <h2 className="section-title" style={{ textAlign: 'center' }}>
           Our <span className="highlight">Practice Areas</span>
         </h2>
-        <p className="section-subtitle" style={{ textAlign: 'center' }}>
+        <p className="section-subtitle" style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
           Comprehensive legal services tailored to your needs.
         </p>
-        <div style={styles.grid}>
+        <div className="home-services-grid">
           {featured.map(service => (
             <Link to={`/services/${service.id}`} key={service.id} style={styles.cardLink}>
               <div className="card" style={styles.card}>
@@ -63,30 +64,30 @@ const Home = () => {
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Why <span className="highlight">The Khan Counsel?</span>
           </h2>
-          <div style={styles.whyGrid}>
+          <div className="home-why-grid">
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
-              Strategic & Proactive
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
+              Strategic &amp; Proactive
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Practical Legal Advice
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Clear Communication
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Outcome-Focused
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
               Client‑Centered Approach
             </div>
             <div style={styles.whyItem}>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} /> 
-              Transparent & Honest
+              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#C68A1B' }} />
+              Transparent &amp; Honest
             </div>
           </div>
         </div>
@@ -94,7 +95,7 @@ const Home = () => {
 
       {/* ===== CTA ===== */}
       <section className="container" style={styles.cta}>
-        <div style={styles.ctaInner}>
+        <div className="home-cta-inner">
           <h2 style={styles.ctaTitle}>Ready to resolve your legal matters?</h2>
           <p style={styles.ctaSub}>Book a consultation with our expert team today.</p>
           <Link to="/contact" className="btn-primary" style={{ background: '#C68A1B', color: '#FFFFFF' }}>
@@ -113,24 +114,6 @@ const styles = {
     padding: '60px 0',
     borderBottom: '1px solid #E8E8E8',
   },
-  heroInner: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-  },
-  heroLeft: {
-    flex: 1,
-    minWidth: '280px',
-  },
-  heroTitle: {
-    fontSize: '3.2rem',
-    fontWeight: '700',
-    color: '#1A1A2E',
-    fontFamily: 'Georgia, serif',
-    lineHeight: 1.1,
-    marginBottom: '16px',
-  },
   heroSub: {
     fontSize: '1.1rem',
     color: '#6B7A8E',
@@ -142,11 +125,6 @@ const styles = {
     gap: '16px',
     flexWrap: 'wrap',
   },
-  heroRight: {
-    flex: 1,
-    minWidth: '200px',
-    textAlign: 'center',
-  },
   heroEmoji: {
     fontSize: '8rem',
     opacity: 1.05,
@@ -157,18 +135,13 @@ const styles = {
     backgroundColor: '#FFF8F0',
     padding: '60px 0',
   },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-    gap: '84px',
-  },
   cardLink: {
     textDecoration: 'none',
   },
   card: {
     borderTop: '3px solid #C68A1B',
     textAlign: 'left',
-    height: '110%',
+    height: '100%',
     padding: '34px',
     backgroundColor: '#FFFFFF',
     borderRadius: '12px',
@@ -200,13 +173,6 @@ const styles = {
     background: '#F5F5F5',
     padding: '60px 0',
   },
-  whyGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',  // ← 3 columns fixed
-    gap: '16px',
-    maxWidth: '900px',
-    margin: '0 auto',
-  },
   whyItem: {
     background: '#FFFFFF',
     padding: '16px 20px',
@@ -224,13 +190,6 @@ const styles = {
   cta: {
     padding: '60px 0',
   },
-  ctaInner: {
-    background: '#1A1A2E',
-    padding: '50px',
-    borderRadius: '16px',
-    textAlign: 'center',
-    color: '#FFFFFF',
-  },
   ctaTitle: {
     fontSize: '2rem',
     fontFamily: 'Georgia, serif',
@@ -242,26 +201,5 @@ const styles = {
     marginBottom: '24px',
   },
 };
-
-// ===== RESPONSIVE =====
-const responsiveStyles = `
-@media (max-width: 768px) {
-  .hero-title { font-size: 2.4rem !important; }
-  .why-grid { grid-template-columns: 1fr 1fr !important; }
-  .cta-title { font-size: 1.6rem !important; }
-}
-@media (max-width: 480px) {
-  .why-grid { grid-template-columns: 1fr !important; }
-  .hero-title { font-size: 1.8rem !important; }
-  .hero-btns .btn-primary, .hero-btns .btn-outline { 
-    width: 100%; 
-    text-align: center; 
-  }
-  .cta-inner { padding: 30px 20px !important; }
-}
-`;
-const styleSheet = document.createElement('style');
-styleSheet.textContent = responsiveStyles;
-document.head.appendChild(styleSheet);
 
 export default Home;
