@@ -53,9 +53,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/thekhancounsel/" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
-              <a href="#" style={styles.socialIcon}><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61592130022555" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
               <a href="#" style={styles.socialIcon}><FontAwesomeIcon icon={faYoutube} size="lg" /></a>
-              <a href="#" style={styles.socialIcon}><FontAwesomeIcon icon={faLinkedin} size="lg" /></a>
+              <a href="https://www.linkedin.com/in/the-khan-counsel-a65327422/" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}><FontAwesomeIcon icon={faLinkedin} size="lg" /></a>
             </div>
             <p style={{ ...styles.text, marginTop: '16px', fontSize: '0.85rem' }}>
               © 2026 The Khan Counsel. All rights reserved.

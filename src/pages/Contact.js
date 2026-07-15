@@ -91,11 +91,11 @@ const Contact = () => {
           </div>
           <div style={styles.infoItem}>
             <strong style={{ color: '#C68A1B' }}>📞 Phone</strong>
-            <p><a href="tel:+923001234567">+92 300 1234567</a></p>
+            <p><a href="tel:+923001234567">+92 333 7131650</a></p>
           </div>
           <div style={styles.infoItem}>
             <strong style={{ color: '#C68A1B' }}>📸 Instagram</strong>
-            <a href="https://www.instagram.com/thisiskhantalks/">@thekhancounsel</a>
+            <a href="https://www.instagram.com/thekhancounsel/">@thekhancounsel</a>
           </div>
           <div style={styles.quoteBox}>
             <strong style={{ color: '#C68A1B' }}>⚖️ The Khan Counsel</strong>
@@ -133,11 +133,9 @@ const Contact = () => {
             <option value="">Select a Practice Area</option>
             <option value="Family Law">Family Law (Pakistan)</option>
             <option value="Civil Law">Civil Litigation</option>
-            <option value="Corporate Law">Corporate & Commercial Law</option>
+            <option value="Corporate Law">Corporate Law</option>
             <option value="Immigration Law">Immigration & Global Mobility</option>
             <option value="Employment Law">Employment Law</option>
-            <option value="Property Law">Property & Real Estate</option>
-            <option value="Regulatory Law">Regulatory & Compliance</option>
           </select>
           <textarea
             name="message"
@@ -168,7 +166,7 @@ const Contact = () => {
         <p>
           ⚡ <strong>Urgent?</strong> Call us directly at{' '}
           <a href="tel:+923001234567" style={{ color: '#C68A1B', fontWeight: '700' }}>
-            +92 300 1234567
+            +92 333 7131650
           </a>
         </p>
       </div>
