@@ -3,8 +3,8 @@
    ============================================================== */
 
 :root{
-  --khc-navy: #0B2B26;
-  --khc-navy-deep: #061814;
+  --khc-navy: #14213B;
+  --khc-navy-deep: #0A1128;
   --khc-gold: #D4AF37;
   --khc-gold-light: #E8C84A;
   --khc-sand: #F5F0E1;
@@ -222,3 +222,4 @@
   .header-container{ padding: 0 16px; }
   .mobile-menu{ width: 82vw; padding: 84px 24px 32px; }
 }
+
